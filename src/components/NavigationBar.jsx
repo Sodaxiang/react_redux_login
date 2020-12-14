@@ -2,12 +2,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 import {logout} from '../actions/authActions';
+import {addFlashMessage} from '../actions/flashMessages';
 
 class NavigationBar extends React.Component{
 
     logout = (e)=>{
         e.preventDefault();
+        //退出后给出提示
         this.props.logout();
+        this.props.addFlashMessage({
+            type: 'success',
+            text:'您已退出'
+        });
+        // new Promise((resolve, reject)=>{
+        //     this.props.logout();
+        //     resolve();
+        // }).then((res)=>{
+        //     this.props.addFlashMessage({
+        //         type: 'success',
+        //         text:'您已退出'
+        //     });
+        // })
     }
     render(){
         const {isAuthenticated} = this.props.auth;
@@ -52,4 +67,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps,{logout})(NavigationBar); 
+export default connect(mapStateToProps,{logout, addFlashMessage})(NavigationBar); 
