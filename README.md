@@ -1,4 +1,4 @@
-# supermall
+# react_redux_login
 #### 该登录系统Demo基于react，redux，react-router,服务器端采用express搭建，数据库使用非关系型数据库MongoDB存储用户信息。
 > 项目结构大致如下：
 ![pro_structure](https://img-blog.csdnimg.cn/20201214144552211.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MTU1NTgy,size_16,color_FFFFFF,t_70)
